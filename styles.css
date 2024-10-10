@@ -1,0 +1,141 @@
+:root {
+  --color-Soft-blue: hsl(215, 51%, 70%);
+  --color-Cyan: hsl(178, 100%, 50%);
+  --color-Very-dark-blue1: hsl(217, 54%, 11%);
+  --color-Very-dark-blue2: hsl(216, 50%, 16%);
+  --color-Very-dark-blue3: hsl(215, 32%, 27%);
+  --color-White: hsl(0, 0%, 100%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* 62.5% of 16px */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.4;
+  background: var(--color-Very-dark-blue1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.cyan {
+  color: var(--color-Cyan);
+}
+
+.divider {
+  height: 1px;
+  margin-block: 1rem 2.3rem;
+  color: hsla(216, 32%, 27%, 1);
+}
+
+.card {
+  width: 350px;
+  max-width: 327px;
+  background: var(--color-Very-dark-blue2);
+  padding: 2.4rem;
+  border-radius: 8px;
+  color: var(--color-Soft-blue);
+  box-shadow: 0px 25px 50px 0px rgba(0, 0, 0, 0.1);
+}
+
+.card__header {
+  position: relative;
+  border-radius: 8px;
+  background: url(/images/image-equilibrium.jpg);
+  background-size: cover;
+}
+
+.card__details {
+  margin-block: 1.2rem;
+}
+
+.card__name {
+  font-size: 2.2rem;
+  color: var(--color-White);
+}
+
+.card__creator-name {
+  color: var(--color-White);
+}
+
+.overlay {
+  width: 278px;
+  height: 278px;
+  border-radius: 8px;
+  background: transparent;
+  transition: background 0.3s;
+  opacity: 0;
+}
+
+.card__header-image-eye {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s;
+}
+
+/* card body */
+.card__body {
+  margin-top: 2.4rem;
+}
+.card__body-icons {
+  justify-content: space-between;
+}
+
+/* Media */
+.media {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.media__text {
+  font-size: 1.5rem;
+}
+
+/* Avata  */
+.card__creator {
+  height: 33px;
+  width: 33px;
+  border: 1px solid var(--color-White);
+  border-radius: 33px;
+}
+
+@media screen and (min-width: 1240px) {
+  .card {
+    max-width: 350px;
+  }
+
+  .overlay {
+    width: 302px;
+  }
+  .card__header:hover .overlay {
+    background: var(--color-Cyan);
+    opacity: 0.5;
+  }
+
+  .card__header:hover .card__header-image-eye {
+    opacity: 1;
+  }
+
+  .card__creator-name:hover,
+  .card__name:hover {
+    color: var(--color-Cyan);
+    cursor: pointer;
+  }
+}
