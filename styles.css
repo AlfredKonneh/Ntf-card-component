@@ -27,6 +27,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  padding: 24px;
 }
 
 .cyan {
@@ -36,12 +37,12 @@ body {
 .divider {
   height: 1px;
   margin-block: 1rem 2.3rem;
-  color: hsla(216, 32%, 27%, 1);
+  background: hsla(216, 32%, 27%, 1);
 }
 
 .card {
-  width: 350px;
-  max-width: 327px;
+  width: 100%;
+  max-width: 350px;
   background: var(--color-Very-dark-blue2);
   padding: 2.4rem;
   border-radius: 8px;
@@ -137,5 +138,12 @@ body {
   .card__name:hover {
     color: var(--color-Cyan);
     cursor: pointer;
+  }
+
+  .card__creator-name:focus,
+  .card__name:focus {
+    color: var(--color-Cyan);
+    outline: 2px solid var(--color-Cyan);
+    outline-offset: 3px;
   }
 }
