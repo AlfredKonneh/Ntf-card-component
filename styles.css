@@ -53,7 +53,7 @@ body {
 .card__header {
   position: relative;
   border-radius: 8px;
-  background: url('/images/image-equilibrium.jpg');
+  background: url('./images/image-equilibrium.jpg');
   background-size: cover;
 }
 
